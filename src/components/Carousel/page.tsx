@@ -12,6 +12,8 @@ const images = [
 
 export default function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const titles = ['2 Sharing room', 'Study Area', 'Healthy Meals']
+  const desc = ['A spacious room, perfect for 2 people, with ultra soft single beds, and an attached bathroom', 'The rooms include desks and lamps, vital for studt/work, helping you burn the midnight oil', 'Meals catered to keep you at the top of your health and energy, with a menu that changes daily']
 
   // Auto slide every 3 seconds
   useEffect(() => {
@@ -55,10 +57,10 @@ export default function Carousel() {
       </div>
 
       {/* Overlay Text */}
-      <div className="absolute inset-0 flex items-end p-6">
-        <div className="text-white">
-          <h2 className="text-2xl font-bold">Title for Slide {currentIndex + 1}</h2>
-          <p className="text-sm mt-1">This is a description or caption for the current slide.</p>
+      <div className="absolute inset-0 flex items-end">
+        <div className="text-white  bg-black/50 w-[100%] p-6">
+          <h2 className="text-2xl font-bold">{titles[currentIndex]}</h2>
+          <p className="text-sm mt-1">{desc[currentIndex]}</p>
         </div>
       </div>
 
