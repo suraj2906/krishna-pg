@@ -6,8 +6,8 @@ import { Manrope } from 'next/font/google';
 const manrope = Manrope({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Krishna PG Hostel',
-  description: 'Comfortable and spiritual PG accommodation at Krishna PG',
+  title: 'Krishna Haven',
+  description: 'Comfortable and spiritual PG accommodation at Krishna Haven PG Hostel',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <header className="bg-gradient-to-r from-blue-900 via-indigo-800 to-purple-900 text-yellow-200 shadow-lg animate-fade-in py-4">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <h1 className="text-2xl sm:text-3xl font-extrabold tracking-wider text-center md:text-left">
-              Krishna PG 🦚
+              Krishna Haven 🦚
             </h1>
             <nav>
               <ul className="flex flex-wrap justify-center md:justify-end gap-x-4 gap-y-2 text-base sm:text-lg text-center">
