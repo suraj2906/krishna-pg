@@ -5,9 +5,32 @@ import Amenities from './amenities/page';
 import Carousel from '@/components/Carousel/page';
 import Testimonials from './testimonials/page';
 import Location from './location/page';
+import emailjs from 'emailjs-com';
+
+
+
 
 
 export default function Home() {
+
+  const sendEmail = (e : React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      'service_0m0ozlh',
+      'template_27m8mpm',
+      e.target as HTMLFormElement,
+      'qoOTfgI3b6-ZXKtLC'
+    )
+    .then((result) => {
+      alert("Email sent successfully!");
+    }, (error) => {
+      alert("Failed to send email: " + error.text);
+    });
+
+    (e.target as HTMLFormElement).reset();
+  };
+
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
 
@@ -66,7 +89,7 @@ export default function Home() {
     </p>
   ) : (
     <form
-      onSubmit={handleSubmit}
+      onSubmit={sendEmail}
       className="max-w-xl mx-auto bg-white p-6 sm:p-10 rounded-3xl shadow-xl animate-fade-in"
     >
       <div className="mb-5">
