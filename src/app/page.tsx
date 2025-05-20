@@ -59,12 +59,12 @@ export default function Home() {
 
       <section id="rooms" className="py-12">
         <h2 className="text-4xl font-semibold text-indigo-900 mb-8 text-center">Our Rooms</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {['Single', 'Double', 'Triple', 'Quadruple'].map((type) => (
             <div key={type} className="bg-white border-4 border-yellow-200 rounded-3xl shadow-2xl p-6 hover:scale-105 transition-transform duration-300">
               <h3 className="text-2xl font-bold text-blue-800">{type} Occupancy</h3>
               <p className="mt-2 text-gray-700">Comfortable space with Krishna-inspired decor, attached bath, and natural ventilation.</p>
-              <p className="mt-4 font-semibold text-indigo-600">₹{type === 'Single' ? '10,00,000' : type === 'Double' ? '5,50,000' : type == 'Triple'? '5,00,000' : '4,75,000'}/year</p>
+              <p className="mt-4 font-semibold text-indigo-600 ">₹{type === 'Single' ? '10,00,000' : type === 'Double' ? '5,50,000' : type == 'Triple'? '5,00,000' : '4,75,000'}/year</p>
             </div>
           ))}
         </div>
