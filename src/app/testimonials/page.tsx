@@ -10,26 +10,7 @@ const testimonials = [
 ];
 
 const Testimonials: NextPage = () => (
-  <>
-    <Head>
-      <title>Testimonials | Krishna PG</title>
-    </Head>
-
-    
-
-    <section className="py-12 bg-white" id='testimonials'>
-      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-        {testimonials.map((t, idx) => (
-          <div key={idx} className="bg-gradient-to-br from-yellow-100 to-indigo-100 p-6 rounded-2xl shadow-lg transform hover:scale-105 transition-transform duration-300">
-            <div className="flex items-center space-x-4 mb-4">
-              <img src={t.avatar} alt={t.name} className="w-16 h-16 rounded-full border-4 border-indigo-200" />
-              <h3 className="text-2xl font-semibold text-indigo-800">{t.name}</h3>
-            </div>
-            <p className="text-gray-700 italic">“{t.text}”</p>
-          </div>
-        ))}
-      </div>
-    </section>
+ <>
   </>
 );
 

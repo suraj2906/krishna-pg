@@ -8,12 +8,24 @@ const images = [
   '/image1.jpg',
   '/image2.jpg',
   '/image3.jpg',
+  '/image4.jpg',
+  '/image5.jpg',
+  '/image6.jpg',
+  '/image7.jpg',
 ];
 
 export default function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const titles = ['2 Sharing room', 'Study Area', 'Healthy Meals']
-  const desc = ['A spacious room, perfect for 2 people, with ultra soft single beds, and an attached bathroom', 'The rooms include desks and lamps, vital for studt/work, helping you burn the midnight oil', 'Meals catered to keep you at the top of your health and energy, with a menu that changes daily']
+  const desc = ['', '', '', '', '', '', '']
+  const titles = [
+    "Elegant bedroom with a double bed, artistic wall painting, and soft natural lighting.",
+    "Bright bedroom with a double bed, large window, and ample storage space.",
+    "Same bedroom with a different angle",
+    "Contemporary dining room with a glass table, dark chairs, and large windows for natural light.",
+    "Cozy sitting area featuring black sofas and a vibrant yellow accent wall.",
+    "Large living room with elegant black sofas, glass coffee table, and bright ambient lighting.",
+    "Spacious modern kitchen with wooden cabinets, black countertops, and ample lighting.",
+  ]
 
   // Auto slide every 3 seconds
   useEffect(() => {
